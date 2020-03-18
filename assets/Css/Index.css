@@ -1,0 +1,567 @@
+:root{
+    --whiteColor :#ffffff;
+    --redColor:  #ff4b5a;
+    --GreenColor:#1fab5a;
+    --darkBlue: #373e49;
+    --fontColor:#4d5866;
+}
+@media only screen and (max-width: 900px) {
+    .body {
+        width: 100%;
+    }
+
+    .column {
+        width: 100%;
+    }
+}
+body {
+    background-color: var(--whiteColor);
+    direction: ltr;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('../Fonts/Gotham-Font/Gotham-Font/Gotham-Medium.eot'); /* IE9 Compat Modes */
+    src: url('../Fonts/Gotham-Font/Gotham-Font/Gotham-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../Fonts/Gotham-Font/Gotham-Font/Gotham-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../Fonts/Gotham-Font/Gotham-Font/Gotham-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../Fonts/Gotham-Font/Gotham-Font/Gotham-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'Arial';
+    url('../Fonts/Gotham-Font/Gotham-Font/arial.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Yellowtail';
+    src: url('../Fonts/Gotham-Font/Gotham-Font/Yellowtail.eot'); /* IE9 Compat Modes */
+    src: url('../Fonts/Gotham-Font/Gotham-Font/Yellowtail.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../Fonts/Gotham-Font/Gotham-Font/Yellowtail.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../Fonts/Gotham-Font/Gotham-Font/Yellowtail.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../Fonts/Gotham-Font/Gotham-Font/Yellowtail.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{ text-decoration: none;}
+.container{
+    margin: auto;
+    width: 100%;
+    height: 4700px;
+    background-color: #f1f1f1;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+.slideShow{
+    height: 700px;
+    position: relative;
+    margin: auto;
+}
+.slideShow .mySlides img{
+    height: 700px;
+}
+.logo{
+    position: absolute;
+    z-index: 1;
+    top:8%;
+    display: inline-block;
+    left:10%;
+    font-size: 68px;
+    line-height: 15px;
+    color: var(--whiteColor);
+    font-family: Yellowtail;
+    text-align: center;
+}
+.slideShow nav{
+    top: 8%;
+    display: inline-block;
+    right:10%;
+    z-index: 1;
+    position: absolute;
+}
+.slideShow nav ul{
+    display: inline-block;
+}
+.slideShow nav ul li{
+    padding-left: 50px ;
+    top: 0;
+}
+.slideShow nav ul li a{
+    text-align: center;
+    text-decoration: none;
+    color: var(--whiteColor);
+    width: 101px;
+    height: 38px;
+    border-radius: 19px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial, serif;
+    font-size: 22px;
+    letter-spacing: 0px;
+    line-height: 15px;
+
+}
+.slideShow nav ul li a:hover{
+    background-color: var(--redColor);
+}
+.mySlides {display:none;}
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--whiteColor);
+    background-color: var(--darkBlue);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    right: 3%;
+}
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--whiteColor);
+    background-color: var(--darkBlue);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    left: 3%;
+}
+.prev:hover, .next:hover {
+    background-color: #6d7d92;
+}
+.slideShow .slideShowText{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    top:30%;
+    left:45%;
+}
+.slideShowText .Bold{
+    padding-top:30px;
+    font-family: "Gotham";
+    font-size: 34px;
+}
+.slideShowText .norm{
+    padding-top:25px;
+    font-size: 20px;
+    font-family: "Gotham";
+    line-height: 30px;
+}
+.slideShowText ul{
+    padding-top:20px;
+}
+.slideShowText ul li p{
+    padding-top:10px;
+    font-size: 20px;
+    font-family: "Gotham";
+}
+.slideShowText ul li p i {
+    width: 13px;
+    height: 13px;
+    color: #ff4c5b;
+    margin-right:5px;
+}
+.dots{
+    position: absolute;
+    margin: -33px 700px;
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+}
+.dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 2px 2px;
+    background-color: #415477;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot:hover{
+    background-color: #6d7d92;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+section.sectionOne {
+    background-image: url("Section1.jpg ");
+    background-repeat: repeat-y;
+    height: 600px;
+}
+section.sectionOne .information1{
+    float: right;
+    padding-right: 15%;
+    padding-top: 8%;
+    display: inline-block;
+}
+section button a {
+    color: var(--whiteColor);
+}
+section button {
+    background-color: var(--redColor);
+    padding: 10px 30px 10px 30px;
+    border: none;
+    margin-top: 10px;
+    width: 194px;
+    height: 63px;
+    border-radius: 2px;
+    font-family: Gotham;
+    font-size: 18px;
+}
+p.red{
+     color: var(--redColor);
+    padding-top: 30px;
+     font-size:20px ;
+    font-family: Gotham;
+ }
+section.sectionOne .information1 p.Bold{
+     font-weight: bold;
+     font-size: 34px;
+    color: var(--fontColor);
+    font-family: Gotham;
+ }
+section.sectionOne .information1 p.norm{
+    font-size: 20px;
+    padding-top: 20px;
+    color: var(--fontColor);
+    font-family: Gotham;
+    line-height: 30px;
+}
+.Green{
+    color: var(--GreenColor);
+}
+p.Green{
+    margin-top: 10px;
+}
+article.sectionTwo{
+    height: 500px;
+    background-color: #f1f1f1;
+}
+article.sectionTwo img {
+    float: right;
+    padding-right: 15%;
+    display: inline-block;
+    width: 700px;
+    height: 300px;
+}
+article.sectionTwo .information2{
+    display: inline-block;
+    padding-left:10% ;
+}
+article.sectionTwo .information2 p.Bold{
+    font-size: 36px;
+    color: var(--fontColor);
+    font-family: Gotham;
+}
+article.sectionTwo .information2 p.Green{
+    font-size: 22px;
+    font-family: Gotham;
+    color: var(--GreenColor);
+    padding-top: 30px;
+}
+article.sectionTwo .information2 p.norm{
+    font-size: 22px;
+    padding-top: 20px;
+    color: var(--fontColor);
+    font-family: Gotham;
+    line-height: 30px;
+}
+article button{
+    color:var(--whiteColor);
+    background-color: var(--GreenColor);
+    padding: 10px 25px 10px 25px;
+    border: none;
+    margin-top: 10px;
+    width: 194px;
+    height: 63px;
+    border-radius: 2px;
+    font-family: Gotham;
+    font-size: 18px;
+}
+article button a{
+    color: var(--whiteColor);
+}
+.Bar{
+    display: block;
+    height: 50px;
+    background-color: var(--darkBlue);
+}
+.agent{
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 50px;
+    background-color: #f1f1f1;
+    height: 400px;
+}
+.agent i.fa{
+    font-size: 50px;
+    color: #66837e;
+}
+.agent p{
+    padding-top: 30px;
+    font-size: 32px;
+    color: #746f6f;
+}
+.agent img{
+    margin-top: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 50%;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+.agent span.frank {
+    position: absolute;
+    left: 51%;
+    padding-top: 30px;
+    display: inline-block;
+    font-size: 24px;
+    color:#746f6f;
+}
+.agent span.prof {
+    position: absolute;
+    left: 51%;
+    padding-top: 30px;
+    display: inline-block;
+    font-size: 22px;
+    color: #746f6f;
+}
+.agent .agentpic{
+    position: relative;
+}
+.sectionThree{
+    height: 680px;
+    position: relative;
+
+}
+.sectionThree .image{
+    display: inline-block;
+    position: absolute;
+    right:12%;
+    top: -10%;
+}
+.sectionThree .text {
+    padding-left:10% ;
+    top:-7%;
+    position: absolute;
+}
+.sectionThree .text p.Bold {
+    margin-top: 20px;
+    color: var(--fontColor);
+    font-family: Gotham;
+    font-size: 32px;
+}
+.sectionThree .text span.Bold {
+    color: var(--fontColor);
+    font-family: Gotham;
+    font-size: 32px;
+
+}
+.sectionThree .text span.black{
+    color: black;
+    font-family: Gotham;
+    font-size: 32px;
+
+}
+.sectionThree .text p.norm {
+    margin-top: 20px;
+    color: var(--fontColor);
+    font-family: Gotham;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom:20px ;
+}
+.sectionThree .text .line{
+    border: 1px solid lightgray;
+}
+.sectionThree .text ul{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.sectionThree .text ul li{
+    padding-top: 10px;
+    font-size: 20px;
+    color: var(--fontColor);
+    font-family: Gotham;
+}
+.sectionThree .text ul li img{
+    width: 30px;
+    height: 30px;
+
+}
+.sectionThree .text button a {
+    color: var(--whiteColor);
+}
+.sectionThree .text button {
+    padding: 10px 20px 10px 20px;
+    background-color: var(--GreenColor);
+    border: none;
+    margin-top: 15px;
+    width: 194px;
+    height: 63px;
+    border-radius: 2px;
+    font-family: Gotham;
+    font-size: 18px;
+    display: block;
+}
+.ourClient{
+    margin: auto;
+    background-color: #F9F9F9;
+    height: 250px;
+}
+.ourClient p.Bold{
+    text-align: center;
+    padding-top: 15px;
+    color: #444e5d;
+    font-size: 32px;
+    font-family: Gotham;
+}
+.ourClient p{
+    text-align: center;
+    padding-top: 5px;
+    color:#606e80;
+    font-size: 22px;
+    font-family: Gotham;
+}
+.ourClient nav{
+    padding-left: 30%;
+}
+.ourClient nav ul{
+    display: inline-block;
+    padding-top: 5%;
+}
+.ourClient nav ul li a img{
+    width: 130px;
+    height: 50px;
+}
+.pricingTable {
+ text-align: center;
+    height: 500px;
+}
+.pricingTable table{
+    width: 700px;
+    border-spacing: 15px;
+    border-collapse: separate;
+    margin: auto;
+    padding-top: 40px;
+    height: 400px;
+}
+.pricingTable p.Bold{
+    font-size: 32px;
+    color: #444e5d;
+    font-family: Gotham;
+
+}
+.pricingTable p{
+    color: #999999;
+    font-family: "Gotham";
+    font-size: 16px;
+    padding-top: 20px;
+}
+tr, td, th{
+    border: 1px solid black;
+    padding: 5px;
+}
+th, td{
+    width: 250px;
+}
+table P.head{
+    font-size: 30px;
+    color: #606e80;
+    font-family: "Gotham";
+    font-weight: bold;
+}
+table P.content{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: var(--fontColor);
+}
+.pricingTable table button a {
+    color: var(--whiteColor);
+}
+.pricingTable table button {
+    padding: 10px 40px 10px 40px;
+    background-color: var(--GreenColor);
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+}
+.ourWorks{
+    height: 1000px;
+    padding-top: 2%;
+    background-color: #F9F9F9;
+}
+.ourWorks .cursor{
+    width: 500px;
+    margin: auto;
+    float: right;
+}
+.ourWorks a{
+    text-decoration: none;
+    right:30%
+    padding: 8px 16px;
+    color:#a8a7a7;
+}
+.ourWorks a:hover{
+    color:#f96b61;
+}
+.ourWorks .line{
+    border: 1px solid lightgray;
+    margin-left:30%;
+    margin-right:30%;
+    margin-top: 2%;
+    color:lightgray;
+}
+.ourWorks p.Bold{
+    text-align: center;
+    font-family: Gotham;
+    font-size: 32px;
+    color:#444e5d;
+}
+.ourWorks table {
+    border: none;
+    margin: auto;
+    margin-top: 2%;
+}
+.ourWorks table tr  {
+    border: none;
+}
+.ourWorks table tr td {
+    border: none;
+}
+.ourWorks table tr td img {
+    width: 250px;
+    height: 200px;
+}

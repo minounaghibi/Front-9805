@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="./assets/Css/reset.css">
+    <link rel="stylesheet" href="./assets/icons/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./assets/Css/Index.css">
+</head>
+<body>
+<div class="container">
+<div class="slideShow ">
+    <nav>
+        <div>
+            <ul>
+                <li>
+                    <a href="http://google.com">HOME</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="http://google.com">STUDIO</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="http://google.com">WORKS</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="http://google.com">ABOUT ME</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="http://google.com">BLOG</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="http://google.com">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="logo">
+        <p>Uihero</p>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="assets/Images/HeaderBg.jpg" style="width:100%">
+        <div class="slideShowText">
+            <p class="Bold">Flat & Modern transparent</p>
+            <p class="norm"> flat inspired UI with some modern transparent <br>Element</br></p>
+            <ul>
+                <li>
+                    <p><i class="fa fa-circle"></i> 16Psd Files to Edite</p>
+                </li>
+                <li>
+                    <p><i class="fa fa-circle"></i> All Font used Link Included</p>
+                </li>
+            </ul>
+            <p class="Bold"> Get Now Your Copy just for <span Class="Green Bold"> 7$ </span></p>
+        </div>
+    </div>
+    <div class="mySlides fade">
+        <img src="assets/Images/Mobile.jpg" style="width:100%" >
+        <div class="slideShowText">
+            <p class="Bold">Flat & Modern transparent</p>
+            <p class="norm"> flat inspired UI with some modern transparent <br>Element</br></p>
+            <ul>
+                <li>
+                    <p><i class="fa fa-circle"></i> 16Psd Files to Edite</p>
+                </li>
+                <li>
+                    <p><i class="fa fa-circle"></i> All Font used Link Included</p>
+                </li>
+            </ul>
+            <p class="Bold"> Get Now Your Copy just for <span Class="Green Bold"> 7$ </span></p>
+        </div>
+    </div>
+    <div class="mySlides fade">
+        <img src="assets/Images/Responsive-Mobile-Friendly-WordPress-Slider.jpeg" style="width:100%">
+        <div class="slideShowText">
+            <p class="Bold">Flat & Modern transparent</p>
+            <p class="norm"> flat inspired UI with some modern transparent <br>Element</br></p>
+            <ul>
+                <li>
+                    <p><i class="fa fa-circle"></i> 16Psd Files to Edite</p>
+                </li>
+                <li>
+                    <p><i class="fa fa-circle"></i> All Font used Link Included</p>
+                </li>
+            </ul>
+            <p class="Bold"> Get Now Your Copy just for <span Class="Green Bold"> 7$ </span></p>
+        </div>
+    </div>
+
+    <button class="next" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="prev" onclick="plusSlides(1)">&#10095;</button>
+
+    <div  class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+
+</script>
+<section class="sectionOne">
+        <div class="information1">
+
+        <p class="Bold">Web & Mobile Landing Page</p>
+        <p class="red">Simple & Elegant Landing Page</p>
+        <p class="norm"> One morning, when Gegor Samsa woke from <br>troubles dreams, he himself transformed in<br> bed into a horrible vermin, He his ar-<br>mour-back.</p>
+            <button type="button"><a href="#"> Readmore</a></button>
+        </div>
+    </section>
+<div class="clearfix"></div>
+<article class="sectionTwo">
+        <img src="./assets/Images/Section2.jpg">
+        <div class="information2">
+            <p class="Bold">Video Promotional on vimeo</p>
+            <p class="Green">simple & Elegant Use Interface</p>
+            <p class="norm"> One morning, when Gegor Samsa woke from <br>troubles dreams, he himself transformed in<br> bed into a horrible vermin, He his ar-<br>mour-back.</p>
+            <button type="button"><a href="#">Readmore</a> </button>
+        </div>
+    </article>
+<div class="Bar"></div>
+<div class="agent">
+        <i class="fa fa-quote-left"></i>
+        <p>"Good design is all about making other designers<br>feel like idiots because that idea wasn't theirs."</p>
+        <div class="agentpic"><img src="assets/Images/agent.jpg">
+        <span class="frank">Frank Chimero</span> <br><br>
+            <span class="prof">Professional Designer</span>
+        </div>
+    </div>
+<div class="clearfix"></div>
+<div class="sectionThree">
+    <div class="image">
+        <img src="assets/Images/Section3.jpg">
+    </div>
+    <div class="text">
+        <p class="Bold">Flat & Modern transparent</p>
+        <p  class="norm">flat inspired UI with some modern transparent<br>Element<br>En se reveillant un matin des reves agite,<br>Gregor  Samsa se retrouva, dans son lit,meta-<br>morphose en un monstrueux insecte.</p>
+        <div class="line"></div>
+       
+        <ul>
+            <li><img src="assets/Images/tik.jpg">16Psd Files Easy to Edite</li>
+            <li><img src="assets/Images/tik.jpg">All Font used Link Includ-</li>
+            <li><img src="assets/Images/tik.jpg">16Psd Files Easy to Edite</li>
+            <li><img src="assets/Images/tik.jpg">All Font used Link Includ-</li>
+        </ul>
+        <span class="Bold">Get Now Your</span> <span class="black" >Copy</span> <span class="Bold" >just for </span><span class="black"> 7$</span>
+         <button type="button"><a href="#"> Download Now</a></button>
+    </div>
+</div>
+<div class="ourClient">
+        <p class="Bold">Our Clients</p>
+        <p>Voyez ce jeu exquis wallon</p>
+        <nav>
+        <ul><li><a href="https://google.com"><img src="assets/Images/themorefast.jpg"  alt="themorefast"> </a></li></ul>
+        <ul><li><a href="https://google.com"><img src="assets/Images/envato.jpg"  alt="envato"> </a></li></ul>
+        <ul><li><a href="https://google.com"><img src="assets/Images/activeden.jpg"  alt="activeden"> </a></li></ul>
+        <ul><li><a href="https://google.com"><img src="assets/Images/audio.jpg"  alt="audio"> </a></li></ul>
+        <ul><li><a href="https://google.com"><img src="assets/Images/graphicriver.jpg"  alt="graphicriver"> </a></li></ul>
+        </nav>
+    </div>
+<div class="pricingTable">
+    <p class="Bold"> Pricing Table</p>
+    <p> Choose From Our Amazing Plans</p>
+ <table>
+     <tr><th><p class="head">Small</p><p>19$/Month</p></th><th><p class="head">Medium</p><p>29$/Month</p></th><th><p class="head">Large</p><p>49$/Month</p></th></tr>
+    <tr><td><p>10.000 messages<br><br>Unlimited data<br><br>Unlimited usrs<br><br>first 30days free</p> <button type="button"><a href="#"> Sign Up</a></button></td>
+    <td><p> 10.000 messages<br><br>Unlimited data<br><br>Unlimited usrs<br><br>first 30days free</> <button type="button"><a href="#"> Sign Up</a></button></td>
+    <td><p>10.000 messages<br><br>Unlimited data<br><br>Unlimited usrs<br><br>first 30days free</p> <button type="button"><a href="#"> Sign Up</a></button></td></tr>
+ </table>
+</div>
+<div class="ourWorks">
+    <p class="Bold"> Our Works</p>
+    <div class="cursor">
+    <a href="#" class="previous">&#10094;</a>
+    <a href="#" class="Next">&#10095;</a>
+    </div>
+    <div class="line"></div>
+    <table>
+        <tr>
+        <td>
+            <img src="assets/Images/ourworks1.jpg" alt="ourworks">
+        </td>
+        <td class="column">
+            <img src="assets/Images/ourworks2.jpg" alt="ourworks">
+        </td>
+        <td class="column">
+            <img src="assets/Images/ourworks3.jpg" alt="ourworks">
+        </td>
+        </tr>
+        <td>
+            <img src="assets/Images/ourworks4.jpg" alt="ourworks">
+        </td>
+        <td>
+            <img src="assets/Images/ourworks5.jpg" alt="ourworks">
+        </td>
+        <td>
+            <img src="assets/Images/ourworks6.jpg" alt="ourworks">
+        </td>
+        <tr>
+            <td>
+                <img src="assets/Images/ourworks7.jpg" alt="outworks">
+            </td>
+            <td>
+                <img src="assets/Images/ourworks8.jpg" alt="outworks">
+            </td>
+            <td>
+                <img src="assets/Images/ourworks9.jpg" alt="outworks">
+            </td>
+        </tr>
+</div>
+
+</div>
+</body>
+</html>
